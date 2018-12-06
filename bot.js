@@ -6,30 +6,14 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);  
 });
 
-client.on('ready', async() => {
-var server = "509357857666236430"; // ايدي السررفر
-var channel = "509357857666236434";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('**XPRO, XPRO , XPRO, XPRO ,XPRO, XPRO ,XPRO, XPRO ,XPRO, XPRO ,XPRO, XPRO ,XPRO, XPRO ,XPRO, XPRO ,XPRO, XPRO ,XPRO, **')
-    },305);
-})
-
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-  if (command == "say") {
-if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`ليس لديك صلاحيات`**');
-   message.channel.sendMessage(args.join("  "))
-   message.delete()
-  }
- });
-
+client.on('guildMemberAdd', member => {
+const mohamed= member.guild.channels.get("515236714101342212");
+if(!mohamed) return;
+if(mohamed) {
+setTimeout(() => mohamed.send(`**w̷e̷l̷c̷o̷m̷e̷  I̷n̷  S̷k̷u̷l̷l̷  N̷e̷t̷w̷o̷r̷k̷#:**
+`), 4000)        
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
