@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-const mohamed= member.guild.channels.get("515236714101342212");
+const mohamed= member.guild.channels.get("519966225321820179");
 if(!mohamed) return;
 if(mohamed) {
 setTimeout(() => mohamed.send(`**w̷e̷l̷c̷o̷m̷e̷  I̷n̷  S̷k̷u̷l̷l̷  N̷e̷t̷w̷o̷r̷k̷#:**
